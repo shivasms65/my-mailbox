@@ -1,0 +1,7 @@
+<%= @emails.messages.count %>
+
+<div class="messages">
+  <% @emails.messages.each do |message| %>
+    <span><%= link_to message.id, mail_box_path(message.id) %> </span><br />
+  <% end %>
+</div>

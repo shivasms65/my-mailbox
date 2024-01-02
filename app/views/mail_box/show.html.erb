@@ -1,6 +1,5 @@
-<div class="message">
-  <%= @email.snippet %>
-</div>
-
+<main style="padding: 20px;">
+  <p><%= @email.snippet %></p>
+</main>
 
 <%= link_to "Go Back to Mail Box", mail_box_index_path, data: { turbo: true } %>

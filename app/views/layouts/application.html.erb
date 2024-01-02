@@ -17,6 +17,8 @@
     <div class="container">
       <% unless current_user %>
         <%= button_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, data: { "turbo-method": :post, turbo: false } %>
+
+        <p>Here is the Test Credentials - <%= mail_to "web.sample.testing@gmail.com" %>/test123* </p>
       <% else %>
         <p>Hello <%= current_user&.name %>!</p>
         <%= link_to "Mail Box", mail_box_index_path, data: { turbo: true } %>
